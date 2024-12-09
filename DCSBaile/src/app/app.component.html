@@ -1,0 +1,12 @@
+<section class="light-theme">
+  <div class="header">
+    <pm-header *ngIf="isHome"></pm-header>
+    <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+  </div>
+
+  <div [ngClass]="{'content': isHome, 'px-4': isHome}">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!--<app-footer *ngIf="isHome"></app-footer>-->
+</section>
